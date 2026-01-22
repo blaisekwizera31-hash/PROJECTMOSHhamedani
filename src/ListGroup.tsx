@@ -1,7 +1,7 @@
 import React from "react";
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-let selectedIndex = 0;
+  let selectedIndex = 0;
   const handleClick = (event: React.MouseEvent) => console.log(event);
 
   return (
@@ -9,9 +9,13 @@ let selectedIndex = 0;
       <h1>List</h1>
       {/* {items.length === 0? <p>No item found</p> : null} */}
       <ul className="listgroup">
-        {items.map((item , index) => (
+        {items.map((item, index) => (
           <li
-            className={selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
             key={item}
             onClick={handleClick}
           >
