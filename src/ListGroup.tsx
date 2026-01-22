@@ -17,7 +17,7 @@ function ListGroup() {
                 : "list-group-item"
             }
             key={item}
-            onClick={() => {selectedIndex = index}}
+            onClick={() => {selectedIndex = index; }}
           >
             {item}
           </li>
