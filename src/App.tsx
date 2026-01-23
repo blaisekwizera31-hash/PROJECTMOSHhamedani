@@ -3,7 +3,14 @@ import Alert from "./assets/Alerts";
 function App() {
   return (
     <div>
-      <Alert></Alert>
+      <Alert>
+
+        Hello world
+        <button type="button" className="btn btn-primary">
+          Primary
+        </button>
+      </Alert>
+    
     </div>
   );
 }
