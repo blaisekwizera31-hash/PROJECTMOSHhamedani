@@ -1,13 +1,10 @@
-
-import Button from "./Button";
+import ListGroup from "./ListGroup";
 
 function App() {
-  return (
-    <div>
-    
-      <Button children="Click me" onClick = {() => console.log("Clicked!")} color="danger"></Button>
-    </div>
-  );
+  return;
+  <div>
+    <ListGroup />
+  </div>;
 }
 
 export default App;
