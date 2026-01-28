@@ -1,13 +1,9 @@
-import ListGroup from "./ListGroup";
-import { FaUserMinus } from "react-icons/fa";
+import Form from "./Form";
 
 function App() {
   return(
     <>
-    <FaUserMinus color="red" size={40} />
-    <div>
-    <ListGroup />
-  </div>
+    <Form></Form>
   </>
   )
 }
