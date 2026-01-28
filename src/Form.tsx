@@ -1,4 +1,5 @@
-import categories from "../../App";
+import {categories} from "../../App";
+
 const Form = () => {
   return (
     <form action="">
@@ -20,7 +21,7 @@ const Form = () => {
         </label> 
         <select  className="form-select" aria-label="Default select example" id="">
           <option value=""></option>
-          {categories.map((category)=> 
+          {categories.map((category: string)=> 
                   <option key={category} value={category}>{category}</option>)
                  }
         </select>
