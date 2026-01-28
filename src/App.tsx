@@ -12,11 +12,11 @@
 
 import { useState } from "react";
 import ExpenseList from "./assets/expense-tracker/components/expenseList";
+import Form from "./Form";
 const categories = ["Utilities", "Groceries", "Entertainment"];
 
 const App = () => {
   const [expenses, setExpenses] = useState([
-    
     {
       id: 1,
       description: "aaa",
@@ -43,12 +43,17 @@ const App = () => {
     },
   ]);
   return (
-    <div>
-      <ExpenseList
-        expenses={expenses}
-        onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
-      />
-    </div>
+    <>
+      <div>
+        <Form></Form>
+      </div>
+      <div>
+        <ExpenseList
+          expenses={expenses}
+          onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
+        />
+      </div>
+    </>
   );
 };
 
