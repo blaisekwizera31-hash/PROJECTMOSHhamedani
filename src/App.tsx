@@ -11,10 +11,13 @@
 // export default App;
 
 
+import { useState } from "react";
 import ExpenseList from "./assets/expense-tracker/components/expenseList";
 
 const App = () => {
-  const expenses = [
+
+ const [expenses, setExpenses] = useState(
+      [
     {
       id: 1,
       description: "aaa",
@@ -39,12 +42,13 @@ const App = () => {
       amount: 400,
       category: "Utilities",
     },
-  ];
+  ]
+  )
   return (
     <div>
       <ExpenseList
         expenses={expenses}
-        onDelete={(id) => console.log("Deleted", id)}
+        onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
       />
     </div>
   );
