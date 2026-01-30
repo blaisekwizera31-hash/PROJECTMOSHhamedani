@@ -9,13 +9,12 @@
 // // }
 
 // // export default App;
- 
+
 // import { useState } from "react";
 // import ExpenseList from "./assets/expense-tracker/components/expenseList";
 // import Form from "./Form";
 // import Filter from "./assets/expense-tracker/Filter";
 // export const categories = ["Utilities", "Groceries", "Entertainment"];
-
 
 // const App = () => {
 //   const [expenses, setExpenses] = useState([
@@ -54,7 +53,7 @@
 //         <ExpenseList
 //           expenses={expenses}
 //           onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
-          
+
 //         />
 //       </div>
 //     </>
@@ -62,15 +61,26 @@
 // };
 
 // export default App;
-import
+import { useEffect, useRef } from "react";
 
 const input = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  if(inputRef.current) inputRef.current.focus();
-  return (
-    
-    <input ref={inputRef} id="description" type="text" className="form-control" />
-  )
-}
+  useEffect(() => {
+    if (inputRef.current) inputRef.current.focus();
+  });
 
-export default input
+  useEffect(() => {
+     document.title = "My first React App";
+});
+  const inputRef = useRef<HTMLInputElement>(null);
+  if (inputRef.current) inputRef.current.focus();
+  return (
+    <input
+      ref={inputRef}
+      id="description"
+      type="text"
+      className="form-control"
+    />
+  );
+};
+
+export default input;
