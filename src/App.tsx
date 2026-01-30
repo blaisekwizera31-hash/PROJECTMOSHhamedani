@@ -1,24 +1,16 @@
+import React, { useEffect } from 'react'
+import ProductList from './ProductList'
 
-import { useEffect, useRef } from "react";
+const App = () => {
 
-const input = () => {
-  useEffect(() => {
-    if (inputRef.current) inputRef.current.focus();
-  });
-
-  useEffect(() => {
-     document.title = "My first React App";  
-});
-  const inputRef = useRef<HTMLInputElement>(null);
-  if (inputRef.current) inputRef.current.focus();
+  useEffect(() =>{
+    
+  })
   return (
-    <input
-      ref={inputRef}
-      id="description"
-      type="text"
-      className="form-control"
-    />
-  );
-};
+    <div>
+      <ProductList></ProductList>
+    </div>
+  )
+}
 
-export default input;
+export default App
